@@ -1,7 +1,7 @@
 
 class Tiro
 	def initialize
-		@ubicacionbomba = 1
+		@ubicacionbomba = (Random.rand 2) + 1
 		@seleccion = 0
 
 	end

@@ -1,7 +1,11 @@
 
 class Tiro
-	def initialize
-		@ubicacionbomba = (Random.rand 2) + 1
+	def initialize pos_bomba=-1
+		if pos_bomba == -1
+			@ubicacionbomba = (Random.rand 2) + 1
+		else
+			@ubicacionbomba = pos_bomba
+		end
 		@seleccion = 0
 
 	end

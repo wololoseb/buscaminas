@@ -11,7 +11,12 @@ end
 
 it "libre" do 
 	tiro = Tiro.new
-	tiro.juega 2
+	if tiro.getubicacionbomba == 1
+		tiro.juega 2
+	else
+		tiro.juega = 1
+	end
+
 	tiro.resultado.should == "sin peligro"
 end
 

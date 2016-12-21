@@ -13,3 +13,6 @@ post '/casilla2' do
 	@resultado = "Ganador!!"
 	erb :buscaminas
 end
+
+
+

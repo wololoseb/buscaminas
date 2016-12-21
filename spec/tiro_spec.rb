@@ -14,11 +14,17 @@ it "libre" do
 	if tiro.getubicacionbomba == 1
 		tiro.juega 2
 	else
-		tiro.juega = 1
+		tiro.juega 1
 	end
 
 	tiro.resultado.should == "sin peligro"
 end
 
+it "obtener ubicacion" do
+	tiro = Tiro.new
+	puts tiro.getubicacionbomba
+	"" == ""
+
+end
 
 end

@@ -6,18 +6,11 @@ get '/' do
 	erb :buscaminas
 end
 
-post '/casilla1' do
-	@@tiro.juega 1
+post '/casilla/:numero' do
+	numero = params["numero"].to_i
+	@@tiro.juega numero
 	@resultado = @@tiro.resultado
 	erb :buscaminas
 end
-
-
-post '/casilla2' do
-	@@tiro.juega 2
-	@resultado = @@tiro.resultado
-	erb :buscaminas
-end
-
 
 

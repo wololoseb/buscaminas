@@ -6,6 +6,9 @@ Scenario: Pantalla con titulo
 
 
 Scenario: apreto vacio
-	Given voy a la pantalla
-	When apreto boton 1
+	Given voy a la pantalla con bomba en 5
+	When apreto boton 5
 	Then debo ver "BOOM"
+
+
+

@@ -7,6 +7,7 @@ class Tiro
 			@ubicacionbomba = pos_bomba
 		end
 		@seleccion = 0
+		@contador = 0
 	end
 
 	def juega ubicacion
@@ -17,10 +18,20 @@ class Tiro
 		if @seleccion == @ubicacionbomba
 			return "BOOM"
 		else
-			return "sin peligro"
+			@contador += 1
+			if @contador == 8
+				return "Ganador"
+			else
+				return "sin peligro"
+			end
+			 
 		end
 	end
 	
+	def getContador
+		@contador
+	end	
+
 	def getubicacionbomba
 		@ubicacionbomba
 	end

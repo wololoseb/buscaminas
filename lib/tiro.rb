@@ -8,6 +8,7 @@ class Tiro
 		end
 		@seleccion = 0
 		@contador = 0
+		@listaHabilita["","","","","","","","",""]
 	end
 
 	def juega ubicacion
@@ -15,6 +16,7 @@ class Tiro
 	end
 
 	def resultado
+		
 		if @seleccion == @ubicacionbomba
 			return "BOOM"
 		else

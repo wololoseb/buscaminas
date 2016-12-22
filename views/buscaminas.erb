@@ -1,61 +1,71 @@
+<div align="center">
+
+
 <h1>Buscaminas</h1>
 
+
+<img src="buscaminas.jpg">
+
+
 <table>
+
 	<tr>
 		<td>
 			<form method="post" action="/casilla/1">
-				<input type="submit" value=" " id="boton1"/>
+				<input type="submit" value=" " id="boton1" <%= @@tiro.getHabilita 1 %>/>
 			</form>		
-		</td>
+		</td> 
 		<td>
 			<form method="post" action="/casilla/2">
-				<input type="submit" value=" " id="boton2"/>
+				<input type="submit" value=" " id="boton2" <%= @@tiro.getHabilita 2 %>/>
 			</form>		
 		</td>
 		<td>
 			<form method="post" action="/casilla/3">
-				<input type="submit" value=" " id="boton3"/>
+				<input type="submit" value=" " id="boton3" <%= @@tiro.getHabilita 3 %>/>
 			</form>		
 		</td>
 	</tr>
 	<tr>
 		<td>
 			<form method="post" action="/casilla/4">
-				<input type="submit" value=" " id="boton4"/>
+				<input type="submit" value=" " id="boton4" <%= @@tiro.getHabilita 4 %>/>
 			</form>		
 		</td>
 		<td>
 			<form method="post" action="/casilla/5">
-				<input type="submit" value=" " id="boton5"/>
+				<input type="submit" value=" " id="boton5" <%= @@tiro.getHabilita 5 %>/>
 			</form>		
 		</td>
 		<td>
 			<form method="post" action="/casilla/6">
-				<input type="submit" value=" " id="boton6"/>
+				<input type="submit" value=" " id="boton6" <%= @@tiro.getHabilita 6 %>/>
 			</form>		
 		</td>
 	</tr>
 	<tr>
 		<td>
 			<form method="post" action="/casilla/7">
-				<input type="submit" value=" " id="boton7" disabled="<%= @habilitado7 %>" />
+				<input type="submit" value=" " id="boton7" <%= @@tiro.getHabilita 7 %>/>
 			</form>		
 		</td>
 		<td>
 			<form method="post" action="/casilla/8">
-				<input type="submit" value=" " id="boton8"/>
+				<input type="submit" value=" " id="boton8"<%= @@tiro.getHabilita 8 %>/>
 			</form>		
 		</td>
 		<td>
 			<form method="post" action="/casilla/9">
-				<input type="submit" value=" " id="boton9"/>
+				<input type="submit" value=" " id="boton9" <%= @@tiro.getHabilita 9 %>/>
 			</form>		
 		</td>
 	</tr>
-
 
 </table>
 
 
 <p><%= @contador %></p>
 <p><%= @resultado %></p>
+
+</div>
+

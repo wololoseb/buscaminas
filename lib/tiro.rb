@@ -8,17 +8,30 @@ class Tiro
 		end
 		@seleccion = 0
 		@contador = 0
-		@listaHabilita["","","","","","","","",""]
+		@listaHabilita = ["","","","","","","","",""]
 	end
 
 	def juega ubicacion
 		@seleccion =  ubicacion
 	end
+	
+	def getHabilita indice
+		return @listaHabilita[indice - 1]
+	end
 
 	def resultado
-		
+		@listaHabilita[@seleccion - 1] = "disabled"
 		if @seleccion == @ubicacionbomba
 			return "BOOM"
+			@listaHabilita[0] = "disabled"
+			@listaHabilita[1] = "disabled"
+			@listaHabilita[2] = "disabled"
+			@listaHabilita[3] = "disabled"
+			@listaHabilita[4] = "disabled"
+			@listaHabilita[5] = "disabled"
+			@listaHabilita[6] = "disabled"
+			@listaHabilita[7] = "disabled"
+		  @listaHabilita[8] = "disabled"
 		else
 			@contador += 1
 			if @contador == 8

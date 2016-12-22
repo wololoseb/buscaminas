@@ -22,7 +22,6 @@ class Tiro
 	def resultado
 		@listaHabilita[@seleccion - 1] = "disabled"
 		if @seleccion == @ubicacionbomba
-			return "BOOM"
 			@listaHabilita[0] = "disabled"
 			@listaHabilita[1] = "disabled"
 			@listaHabilita[2] = "disabled"
@@ -31,7 +30,9 @@ class Tiro
 			@listaHabilita[5] = "disabled"
 			@listaHabilita[6] = "disabled"
 			@listaHabilita[7] = "disabled"
-		  @listaHabilita[8] = "disabled"
+		  	@listaHabilita[8] = "disabled"
+			return "BOOM"
+
 		else
 			@contador += 1
 			if @contador == 8

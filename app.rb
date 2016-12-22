@@ -11,7 +11,9 @@ post '/casilla/:numero' do
 	@@tiro.juega numero
 	@resultado = @@tiro.resultado
 	@contador = @@tiro.getContador	
-
+	if @@tiro.resultado == "BOOM"
+		@imagen = '<img src="/buscaminas.jpg">'
+	end
 	erb :buscaminas
 end
 

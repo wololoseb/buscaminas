@@ -10,6 +10,7 @@ post '/casilla/:numero' do
 	numero = params["numero"].to_i
 	@@tiro.juega numero
 	@resultado = @@tiro.resultado
+
 	erb :buscaminas
 end
 

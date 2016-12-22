@@ -1,10 +1,13 @@
+
+
 Given(/^voy a la pantalla$/) do
   visit '/'
 end
 
 
 Given(/^voy a la pantalla con bomba en (\d+)$/) do |numero|
-   	  visit '/', :post, "field_name=" + numero
+   visit '/'
+	 @@tiro = Tiro.new numero.to_i
 end
 
 Then(/^debo ver "(.*?)"$/) do |titulo|
